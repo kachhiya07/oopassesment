@@ -1,4 +1,5 @@
-//Data members:
+
+	//Data members:
 //a) Name of the lecturer
 //b) Name of the subject
 //c) Name of course
@@ -13,38 +14,53 @@
 #include<iostream>
 using namespace std;
 class lecture{
-	public:
+	private:
 	
 		string name,subject,course;
+	public:
+		void get()
+		{
+		cout<<"enter lecturer name : ";
+		cin>>name;
+		cout<<"enter subject name:";
+		cin>>subject;
+		cout<<"enter course name:";
+		cin>>course;
+		cout<<endl;
+				
+		}
+		void display()
+	{
+			cout<<" lecturer name : ";
+			cout<<name<<endl;
+			cout<<" subject name : ";
+			cout<<subject<<endl;
+			cout<<"course name : ";
+			cout<<course<<endl;
+			cout<<endl;
+		
+	}
 		
 };
 int main()
 {
 	int i;
 	lecture obj[5];
+	
+
 	for(i=0;i<5;i++)
 	{
 		cout<<"lecturer no : "<<i+1<<endl;
-		cout<<"enter lecturer name : ";
-		cin>>obj[i].name;
-		cout<<"enter subject name:";
-		cin>>obj[i].subject;
-		cout<<"enter course name:";
-		cin>>obj[i].course;
-		cout<<endl;
+		obj[i].get();
+		
 	}
 	cout<<"-----display of lecturer------"<<endl;
 	for(i=0;i<5;i++)
 	{
-	cout<<"lecturer:"<<i+1<<endl;
-	cout<<" lecturer name : ";
-	cout<<obj[i].name<<endl;
-	cout<<" subject name : ";
-	cout<<obj[i].subject<<endl;
-	cout<<"course name : ";
-	cout<<obj[i].course<<endl;
-	cout<<endl;
+	
+		obj[i].display();
+		
 	}
 
-	
+	return 0;
 }
